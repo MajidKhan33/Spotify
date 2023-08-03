@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify -  The way to heal you</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bbc3d80247.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="./spotify.png" alt="spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <!-- now jo main content hai jaha jaane dekhenege vo container ke ander honge -->
+    <!-- ye container class me css likhen ge ke isme kya honga kya nhi honga -->
+    <!-- container class ke ander 2 aur class banayenge ek {song list} jaha song ke list hai aur ek {song banner} ye right part me kuch add karne -->
+    <div class="container">
+        <div class="songList">
+            <h1>Best of Amk - No copyright sound</h1>
+            <div class="songItemContainer ">
+                <div class="songItem">
+                    <img  alt="1">
+                    <span class="songName">Tammana Mudaaton se hai</span>        <!--span so that the image and photo be in the same line    -->
+                    <!-- we will create the play icon for this -->
+                    <span  class="songlistplay"><span class="songName" class="timestamp">05:35 <i id="0" class="fa-solid songItemPlay fa-circle-play"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img  alt="1">
+                    <span class="songName">Tammana Mudaaton se hai</span>        
+                    <span class="songlistplay"><span class="songName" class="timestamp">05:35 <i id="1" class="fa-solid songItemPlay fa-circle-play"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img  alt="1">
+                    <span class="songName">Tammana Mudaaton se hai</span>        
+                    <span class="songlistplay"><span class="songName" class="timestamp">05:35 <i id="2" class="fa-solid songItemPlay fa-circle-play"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img  alt="1">
+                    <span class="songName">Tammana Mudaaton se hai</span>        
+                    <span  class="songlistplay"><span class="songName" class="timestamp">05:35 <i id="3" class="fa-solid songItemPlay fa-circle-play"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img  alt="1">
+                    <span class="songName">Tammana Mudaaton se hai</span>        
+                    <span class="songlistplay"><span class="songName" class="timestamp">05:35 <i id="4" class="fa-solid songItemPlay fa-circle-play"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img  alt="1">
+                    <span class="songName">Tammana Mudaaton se hai</span>        
+                    <span class="songlistplay"><span class="songName" class="timestamp">05:35 <i id="5" class="fa-solid songItemPlay fa-circle-play"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img  alt="1">
+                    <span class="songName">Tammana Mudaaton se hai</span>        
+                    <span class="songlistplay"><span class="songName" class="timestamp">05:35 <i id="6" class="fa-solid songItemPlay fa-circle-play"></i> </span></span>
+                </div>  
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <!-- class banayenge bottom name se jisme song ko play stop kar sakte ye ek strip ranhenge -->
+    <!-- input to make the song playing bar like where is the song right now at what time (0-100 %)  -->
+    <!-- we will style the bottom at the bottom of the page by css -->
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+        <!-- font awesome icons printing the html for play icon -->
+        <i  class="fa-solid songItemPlay fa-3x fa-backward-step" id="previous"></i>
+        <i  class="fa-solid songItemPlay fa-3x fa-circle-play" id="masterPlay"></i>   
+        <i  class="fa-solid songItemPlay fa-3x fa-forward-step" id="next"></i>
+    </div>
+
+    <!-- we will create the playing gif at the bottom -->
+    <div class="songInfo">
+        <img src="playing.gif" width="52px" alt="" id="gif"><span id="masterSongName">Duniya ke ay musafir</span>
+    </div>
+    <script src="script.js"></script>
+ <script src="https://kit.fontawesome.com/bbc3d80247.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>

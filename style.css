@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    font-family: 'Playfair', serif;
+}
+
+/*ab hum log jo home likha hua hai usko (display flex ke zariye horizontal karenge)
+and bindi ko nikaal lenge
+ye sab tha nav aur ul ke ander in html*/
+nav ul{
+    display:flex;
+    align-items:center;         /*saare ite,s ko centre me laane ke leye*/
+    list-style-type: none;
+    height:65px;
+    background-color: black;
+    color: white;
+}
+
+/*li me padding dene ke leye
+bcoz thode dore banana hai words me   kitne denge hum uper neeche ke 0 ke aur 12 ke side se*/
+nav ul li{
+    padding: 0 12px;
+}
+/*spotify icon ko chota karne ke leye brand class ka use karenge
+brand ke ander ke img ko target karenge*/
+.brand img{
+    width:44px;
+    padding: 0 8px;
+}
+
+/*ab ek aur flex box banayenge .brand ka taaki SPOTIFY name ko center me laale*/
+.brand{
+    display:flex;
+    align-items:center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+
+}
+
+/* we will change the height of container class to move the bottom strip at the end pf the page */
+/* 75vh means 75 percent of height */
+.container{
+    min-height: 75vh;
+    background-color: black;
+    color:white;
+    font-family: 'Playfair', serif; 
+    display: flex;
+    margin: 25px auto;          /* top bottom se 23 units and auto taake center pe aajai*/
+    width: 80%;
+    border-radius: 12px;
+    padding: 32px;
+    background-image: url('bg1.jpg');
+} 
+
+
+/* we will design the bottom bar make it black in colour and a=make the pay button as well as after and before button */
+.bottom{
+    position : sticky;
+    bottom: 0;
+    height : 100px;
+    background-color: black;
+    color:white;
+    /* to make the progress bar at the centre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex direction changed to column to make it below  */
+    flex-direction: column;
+
+}
+/* we will make the margin in icon (play)so that it does not stick the progress bar */
+.icons{
+    margin-top: 14px;
+}
+/* icons pe agar point kare to cursor aana chaheye   */
+.icons i{
+    cursor: pointer;
+}
+/* make progress bar in the centre */
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+} 
+
+/* saare song ke baar ke beech me space ke leye */
+.songItemContainer{
+    margin-top: 34px;
+}
+
+/* song item class ko edit karenge aur display flex karenge taaki sab horizontal aaye */
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;             /*colour code is for thr text in class*/
+    margin: 12px 0 ;            /*margin denge top bottom se 12px ke aur right left se 0 px*/
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+}
+
+/* we will change the size of the image of songs  */
+.songItem img{
+    width: 45px;
+    margin: 0 23px ;
+    border-radius: 60px;
+}
+
+/* time likha hua hai na usko change karne ke leye */
+.timestamp{
+    margin: 0 23px;
+}
+/* putting the cursor in image of time play button */
+.timestamp i{
+    cursor: pointer;
+}
+
+/* changing the songInfo position playing song icon to the left */
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Playfair', serif; 
+
+}
+
+/* we dont want our gif to be playing every time so we will make it play at the movement when 
+song is playing */
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+    
+}
